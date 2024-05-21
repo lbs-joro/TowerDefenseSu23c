@@ -35,5 +35,9 @@ public class EnemyMovement : MonoBehaviour
             }
         }
 
+        //Rotera så att vi tittar åt det håll vi går
+
+        float angle = Vector2.SignedAngle(Vector2.right, direction);
+        transform.rotation = Quaternion.Euler(0, 0, angle );
     }
 }
